@@ -1,4 +1,4 @@
-package com.solvd.laba.block1.task2;
+package com.solvd.laba.block1.task2_OOP;
 
 public class Item {
     private String name;

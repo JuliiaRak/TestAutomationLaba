@@ -1,4 +1,4 @@
-package com.solvd.laba.block1.task2;
+package com.solvd.laba.block1.task2_OOP;
 
 public class Adress {
     private String city;
@@ -33,5 +33,13 @@ public class Adress {
 
     public void setBuilding(String building) {
         this.building = building;
+    }
+
+    @Override
+    public String toString() {
+        return "Adress: " +
+                "city " + city+
+                ", street " + street +
+                ", building " + building;
     }
 }

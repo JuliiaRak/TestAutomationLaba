@@ -1,4 +1,4 @@
-package com.solvd.laba.block1.task2;
+package com.solvd.laba.block1.task2_OOP;
 
 public class Vehicle {
     private VehicleType type;
@@ -13,5 +13,10 @@ public class Vehicle {
 
     public void setType(VehicleType type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return type.name().toLowerCase();
     }
 }

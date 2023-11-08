@@ -1,18 +1,21 @@
-package com.solvd.laba.block1.task2;
+package com.solvd.laba.block1.task2_OOP;
 
 public class DeliveryOrder {
-    private Customer sender;
-    private Customer recipient;
-    private Item item;
-    private Courier courier;
-    private double distance;
+    protected Customer sender;
+    protected Customer recipient;
+    protected Item item;
+    protected Courier courier;
+    protected double distance;
+    protected DeliveryStatus deliveryStatus;
 
-    public DeliveryOrder(Customer sender, Customer recipient, Item item,  Courier courier, double distance) {
+    public DeliveryOrder(Customer sender, Customer recipient, Item item,
+                         Courier courier, double distance, DeliveryStatus deliveryStatus) {
         this.sender = sender;
         this.recipient = recipient;
         this.item = item;
         this.courier = courier;
         this.distance = distance;
+        this.deliveryStatus = deliveryStatus;
     }
 
     public Customer getSender() {
@@ -53,5 +56,13 @@ public class DeliveryOrder {
 
     public void setDistance(double distance) {
         this.distance = distance;
+    }
+
+    public DeliveryStatus getDeliveryStatus() {
+        return deliveryStatus;
+    }
+
+    public void setDeliveryStatus(DeliveryStatus deliveryStatus) {
+        this.deliveryStatus = deliveryStatus;
     }
 }
