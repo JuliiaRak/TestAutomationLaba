@@ -1,19 +1,26 @@
 package com.solvd.laba.block1.task2_OOP;
 
-public class DeliveryOrder {
+import com.solvd.laba.block1.task2_OOP.Enums.DeliveryStatus;
+import com.solvd.laba.block1.task2_OOP.Enums.VehicleType;
+import com.solvd.laba.block1.task2_OOP.Interfaces.StatusChangeable;
+
+public class DeliveryOrder implements StatusChangeable {
     protected Customer sender;
     protected Customer recipient;
     protected Item item;
     protected Courier courier;
     protected double distance;
-    protected DeliveryStatus deliveryStatus;
+    protected DeliveryStatus deliveryStatus = Constants.DEFAULT_STATUS;
+
+    static {
+        System.out.println("Creating a delivery order...\n");
+    }
 
     public DeliveryOrder(Customer sender, Customer recipient, Item item, double distance) {
         this.sender = sender;
         this.recipient = recipient;
         this.item = item;
         this.distance = distance;
-        this.deliveryStatus = DeliveryStatus.PENDING;
         setCourier(item);
     }
 
@@ -78,5 +85,10 @@ public class DeliveryOrder {
 
     public void setDeliveryStatus(DeliveryStatus deliveryStatus) {
         this.deliveryStatus = deliveryStatus;
+    }
+
+    @Override
+    public void changeStatus(DeliveryStatus newStatus) {
+        this.deliveryStatus = newStatus;
     }
 }

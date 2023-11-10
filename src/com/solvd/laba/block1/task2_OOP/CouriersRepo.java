@@ -1,5 +1,7 @@
 package com.solvd.laba.block1.task2_OOP;
 
+import com.solvd.laba.block1.task2_OOP.Enums.VehicleType;
+
 public class CouriersRepo {
 
     static Courier courierWithCar = new Courier(new FullName("Alex", "Yemets"), "0673962558", "alex@gmail.com", VehicleType.CAR);
