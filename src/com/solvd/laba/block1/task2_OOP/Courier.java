@@ -1,9 +1,9 @@
 package com.solvd.laba.block1.task2_OOP;
 
 public class Courier extends Person {
-    private Vehicle vehicle;
+    private VehicleType vehicle;
 
-    public Courier(FullName fullName, String phoneNumber, String email, Vehicle vehicle) {
+    public Courier(FullName fullName, String phoneNumber, String email, VehicleType vehicle) {
         super(fullName, phoneNumber, email);
         this.vehicle = vehicle;
     }
@@ -13,11 +13,11 @@ public class Courier extends Person {
         System.out.println("Tracking delivery status as a courier...");
     }
 
-    public Vehicle getVehicle() {
+    public VehicleType getVehicle() {
         return vehicle;
     }
 
-    public void setVehicle(Vehicle vehicle) {
+    public void setVehicle(VehicleType vehicle) {
         this.vehicle = vehicle;
     }
 

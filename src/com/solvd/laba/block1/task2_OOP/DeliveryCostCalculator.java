@@ -1,16 +1,12 @@
 package com.solvd.laba.block1.task2_OOP;
 
 public class DeliveryCostCalculator {
-    public Double initialCost = 100.0;
+    public final Double initialCost = 50.0;
 
     public DeliveryCostCalculator(){
     }
 
-    public DeliveryCostCalculator(double initialCost){
-        this.initialCost = initialCost;
-    }
-
     public double calculateDeliveryCost(DeliveryOrder order) {
-        return initialCost;
+        return initialCost + order.item.getWeight()*10 + order.distance*2 + order.courier.getVehicle().getСoefficient()*10;
     }
 }

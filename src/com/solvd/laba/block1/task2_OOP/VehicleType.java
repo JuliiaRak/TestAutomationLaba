@@ -1,24 +1,24 @@
 package com.solvd.laba.block1.task2_OOP;
 
 public enum VehicleType {
-    CAR(120),
-    TRUCK(80),
-    MOTORCYCLE(150),
-    BICYCLE(20);
+    TRUCK(8),
+    CAR(5),
+    MOTORCYCLE(4),
+    BICYCLE(2);
 
-    private final int speed;  // Додаткове поле для зберігання швидкості
+    private final int coefficient;  // Додаткове поле для зберігання швидкості
 
-    VehicleType(int speed) {
-        this.speed = speed;
+    VehicleType(int coefficient) {
+        this.coefficient = coefficient;
     }
 
-    public int getSpeed() {
-        return speed;
+    public int getСoefficient() {
+        return coefficient;
     }
 
     @Override
     public String toString() {
-        return name().toLowerCase() + " (speed: " + speed + ")";
+        return name().toLowerCase() + " (coefficient: " + coefficient + ")";
     }
 }
 
