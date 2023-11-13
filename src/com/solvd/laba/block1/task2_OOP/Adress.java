@@ -1,14 +1,26 @@
 package com.solvd.laba.block1.task2_OOP;
 
+import com.solvd.laba.block1.task2_OOP.exceptions.InvalidAddressException;
+
 public class Adress {
     private String city;
     private String street;
     private String building;
 
-    public Adress(String city, String street, String building){
-        this.city = city;
-        this.street = street;
-        this.building = building;
+    public Adress(String city, String street, String building) throws InvalidAddressException {
+        if (isValidAddress(city, street, building)) {
+            this.city = city;
+            this.street = street;
+            this.building = building;
+        } else {
+            throw new InvalidAddressException("Invalid address format");
+        }
+    }
+
+    private boolean isValidAddress(String city, String street, String building) {
+        return city != null && !city.isEmpty() &&
+                street != null && !street.isEmpty() &&
+                building != null && !building.isEmpty();
     }
 
     public String getCity() {

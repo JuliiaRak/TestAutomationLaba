@@ -1,16 +1,18 @@
 package com.solvd.laba.block1.task2_OOP;
 
-import com.solvd.laba.block1.task2_OOP.Interfaces.CostCalculatable;
+import com.solvd.laba.block1.task2_OOP.exceptions.DeliveryCostCalculationException;
 
-public class DeliveryCostCalculator implements CostCalculatable {
-    public double initialCost = Constants.BASE_COST;
+public class DeliveryCostCalculator {
+    public static double initialCost = Constants.BASE_COST;
 
-    public DeliveryCostCalculator(){
+    public static double calculateDeliveryCost(DeliveryOrder order) throws DeliveryCostCalculationException {
+        try {
+            double distanceCost = order.getDistance()*2;
+            double weightCost = order.getItem().getWeight()*10;
+            double courierCost = order.getCourier().getVehicle().getСoefficient()*10;
+            return initialCost + weightCost + distanceCost + courierCost;
+        } catch (Exception e) {
+            throw new DeliveryCostCalculationException("Error calculating delivery cost: " + e.getMessage());
+        }
     }
-
-    @Override
-    public double calculateDeliveryCost(DeliveryOrder order) {
-        return initialCost + order.item.getWeight()*10 + order.distance*2 + order.courier.getVehicle().getСoefficient()*10;
-    }
-
 }

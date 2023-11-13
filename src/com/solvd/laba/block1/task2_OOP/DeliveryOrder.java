@@ -1,8 +1,9 @@
 package com.solvd.laba.block1.task2_OOP;
 
-import com.solvd.laba.block1.task2_OOP.Enums.DeliveryStatus;
-import com.solvd.laba.block1.task2_OOP.Enums.VehicleType;
-import com.solvd.laba.block1.task2_OOP.Interfaces.StatusChangeable;
+import com.solvd.laba.block1.task2_OOP.enums.DeliveryStatus;
+import com.solvd.laba.block1.task2_OOP.enums.VehicleType;
+import com.solvd.laba.block1.task2_OOP.exceptions.SettingCourierException;
+import com.solvd.laba.block1.task2_OOP.interfaces.StatusChangeable;
 
 public class DeliveryOrder implements StatusChangeable {
     protected Customer sender;
@@ -16,7 +17,10 @@ public class DeliveryOrder implements StatusChangeable {
         System.out.println("Creating a delivery order...\n");
     }
 
-    public DeliveryOrder(Customer sender, Customer recipient, Item item, double distance) {
+    public DeliveryOrder() {
+    }
+
+    public DeliveryOrder(Customer sender, Customer recipient, Item item, double distance) throws SettingCourierException {
         this.sender = sender;
         this.recipient = recipient;
         this.item = item;
@@ -28,7 +32,7 @@ public class DeliveryOrder implements StatusChangeable {
         return courier;
     }
 
-    public void setCourier(Item item) {
+    public void setCourier(Item item) throws SettingCourierException{
         VehicleType vehicleType;
         if (item.getWeight() >= 0 && item.getWeight() <= 2) vehicleType = VehicleType.BICYCLE;
         else if (item.getWeight() >= 2 && item.getWeight() <= 4) vehicleType = VehicleType.MOTORCYCLE;
@@ -37,13 +41,16 @@ public class DeliveryOrder implements StatusChangeable {
         else vehicleType = null;
 
         Courier foundCourier = null;
-        for (Courier courier : CouriersRepo.couriers) {
+        for (Courier courier : CouriersRepo.getCouriers()) {
             if (courier.getVehicle() == vehicleType) {
                 foundCourier = courier;
                 break;
             }
         }
-
+        if (foundCourier == null) {
+            // Якщо не знайдено кур'єра для вказаного типу транспорту, викидайте виняток
+            throw new SettingCourierException("No suitable courier found for the specified vehicle type.");
+        }
         this.courier = foundCourier;
     }
 
@@ -90,5 +97,15 @@ public class DeliveryOrder implements StatusChangeable {
     @Override
     public void changeStatus(DeliveryStatus newStatus) {
         this.deliveryStatus = newStatus;
+    }
+
+    @Override
+    public String toString() {
+        return "Your delivery order details:\n" +
+                "Sender: " + sender.getFullName() +"\n" +
+                "Recipient: " + recipient.getFullName() +"\n" +
+                "Item: " + item.getName() +"\n" +
+                "Distance: " + distance +"\n" +
+                "DeliveryStatus: " + deliveryStatus +"\n";
     }
 }

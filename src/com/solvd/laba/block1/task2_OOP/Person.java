@@ -1,16 +1,41 @@
 package com.solvd.laba.block1.task2_OOP;
 
+import com.solvd.laba.block1.task2_OOP.exceptions.InvalidAddressException;
+import com.solvd.laba.block1.task2_OOP.exceptions.InvalidEmailException;
+import com.solvd.laba.block1.task2_OOP.exceptions.InvalidPhoneNumberException;
+
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 public abstract class Person {
     protected FullName fullName;
     protected String phoneNumber;
     protected String email;
 
-    public Person(FullName fullName, String phoneNumber, String email) {
+    public Person(FullName fullName, String phoneNumber, String email) throws InvalidPhoneNumberException, InvalidEmailException {
         this.fullName = fullName;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
+        if (isValidPhoneNumber(phoneNumber)) {
+            this.phoneNumber = phoneNumber;
+        } else {
+            throw new InvalidPhoneNumberException("Invalid phone number format");
+        }
+        if (isValidEmail(email)) {
+            this.email = email;
+        } else {
+            throw new InvalidEmailException("Invalid email format");
+        }
+    }
+
+    public static boolean isValidPhoneNumber(String number) {
+        String phoneRegex = "^\\+380\\d{9}$";
+        Pattern pattern = Pattern.compile(phoneRegex);
+        return pattern.matcher(number).matches();
+    }
+
+    public static boolean isValidEmail(String email) {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        Pattern pattern = Pattern.compile(emailRegex);
+        return pattern.matcher(email).matches();
     }
 
     public abstract void trackDeliveryStatus();

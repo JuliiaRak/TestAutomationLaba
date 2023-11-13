@@ -4,5 +4,6 @@ public class Main {
     public static void main(String[] args) {
         DeliveryService.printServiceWelcome();
         DeliveryService.printInfo();
+        DeliveryService.printInfoInFile();
     }
 }

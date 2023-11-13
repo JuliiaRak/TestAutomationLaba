@@ -1,11 +1,14 @@
 package com.solvd.laba.block1.task2_OOP;
 
+import com.solvd.laba.block1.task2_OOP.exceptions.InvalidEmailException;
+import com.solvd.laba.block1.task2_OOP.exceptions.InvalidPhoneNumberException;
+
 import java.util.Objects;
 
 public class Customer extends Person {
     private Adress address;
 
-    public Customer(FullName fullName, String phoneNumber, String email, Adress address) {
+    public Customer(FullName fullName, String phoneNumber, String email, Adress address) throws InvalidPhoneNumberException, InvalidEmailException {
         super(fullName, phoneNumber, email);
         this.address = address;
     }
