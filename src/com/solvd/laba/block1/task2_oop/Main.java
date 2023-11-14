@@ -10,11 +10,12 @@ public class Main {
     }
 
     private static final Logger logger = LogManager.getLogger(Main.class);
+    private static final DeliveryService deliveryService = new DeliveryService();
 
     public static void main(String[] args) {
         logger.info("PROGRAM STARTED");
-        DeliveryService.printInfo();
-        DeliveryService.printInfoInFile();
+        deliveryService.printInfo();
+        deliveryService.printInfoInFile();
         logger.info("PROGRAM ENDED\n");
     }
 }

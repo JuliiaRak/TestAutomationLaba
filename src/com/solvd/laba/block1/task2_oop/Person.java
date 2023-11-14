@@ -37,8 +37,6 @@ public abstract class Person {
         return pattern.matcher(email).matches();
     }
 
-    public abstract void trackDeliveryStatus();
-
     public FullName getFullName() {
         return fullName;
     }

@@ -3,10 +3,8 @@ package com.solvd.laba.block1.task2_oop;
 import com.solvd.laba.block1.task2_oop.enums.VehicleType;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
-import com.solvd.laba.block1.task2_oop.interfaces.Deliverable;
-import com.solvd.laba.block1.task2_oop.interfaces.Trackable;
 
-public class Courier extends Person implements Trackable, Deliverable {
+public class Courier extends Person {
     private VehicleType vehicle;
 
     public Courier(FullName fullName, String phoneNumber, String email, VehicleType vehicle) throws InvalidPhoneNumberException, InvalidEmailException {
@@ -14,10 +12,6 @@ public class Courier extends Person implements Trackable, Deliverable {
         this.vehicle = vehicle;
     }
 
-    @Override
-    public void trackDeliveryStatus() {
-        System.out.println("Tracking delivery status as a courier...");
-    }
 
     public VehicleType getVehicle() {
         return vehicle;
@@ -33,8 +27,4 @@ public class Courier extends Person implements Trackable, Deliverable {
         return parentString + ", address: " + vehicle.toString();
     }
 
-    @Override
-    public void deliver() {
-
-    }
 }

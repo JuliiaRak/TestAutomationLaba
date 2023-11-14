@@ -2,19 +2,21 @@ package com.solvd.laba.block1.task2_oop;
 
 import com.solvd.laba.block1.task2_oop.exceptions.*;
 import java.io.IOException;
+import com.solvd.laba.block1.task2_oop.interfaces.IDeliveryService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class DeliveryService {
+public class DeliveryService implements IDeliveryService {
 
     private static final Logger logger = LogManager.getLogger(DeliveryService.class);
+    private final DeliveryCostCalculator deliveryCostCalculator = new DeliveryCostCalculator();
 
-    static {
+    public DeliveryService (){
         System.out.println("Welcome to our delivery service!\n");
         logger.info("Welcome to our delivery service!");
     }
 
-    private static DeliveryOrder createNewOrder(){
+    private DeliveryOrder createNewOrder(){
         DeliveryOrder order = new DeliveryOrder();
         try {
             // Створення об'єктів і виклик конструкторів
@@ -38,14 +40,15 @@ public class DeliveryService {
         return order;
     }
 
-    public static void printInfo() {
+    @Override
+    public void printInfo() {
         logger.info("Printing order info into console");
         try {
             // Створення об'єктів і виклик конструкторів
             DeliveryOrder order = createNewOrder();
 
             // Визначення вартості доставки
-            double cost = DeliveryCostCalculator.calculateDeliveryCost(order);
+            double cost = deliveryCostCalculator.calculateDeliveryCost(order);
 
             // Виведення основної інформації
             System.out.printf(order.toString());
@@ -58,14 +61,15 @@ public class DeliveryService {
         }
     }
 
-    public static void printInfoInFile() {
+    @Override
+    public void printInfoInFile() {
         logger.info("Printing order info into file");
-        try (DeliveryOrderWriter orderWriter = new DeliveryOrderWriter("orders.txt")) {
+        try (DeliveryOrderFileWriter orderWriter = new DeliveryOrderFileWriter("orders.txt")) {
             // Створення об'єктів і виклик конструкторів
             DeliveryOrder order = createNewOrder();
 
             // Визначення вартості доставки
-            double cost = DeliveryCostCalculator.calculateDeliveryCost(order);
+            double cost = deliveryCostCalculator.calculateDeliveryCost(order);
 
             // Запис основної інформації в файл
             orderWriter.write(order.toString());

@@ -13,11 +13,6 @@ public class Customer extends Person {
         this.address = address;
     }
 
-    @Override
-    public void trackDeliveryStatus() {
-        System.out.println("Tracking delivery status as a customer...");
-    }
-
     public Adress getAddress() {
         return address;
     }

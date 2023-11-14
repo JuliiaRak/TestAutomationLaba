@@ -31,3 +31,58 @@
 16:19:29.671 [main] ERROR com.solvd.laba.block1.task2_oop.DeliveryService - Error calculating delivery cost: Cannot invoke "com.solvd.laba.block1.task2_oop.Item.getWeight()" because the return value of "com.solvd.laba.block1.task2_oop.DeliveryOrder.getItem()" is null
 16:19:29.671 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
 
+16:22:40.624 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+16:22:40.627 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+16:22:40.628 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into console
+16:22:40.628 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+16:22:40.642 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+16:22:40.643 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 129.0
+16:22:40.643 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into file
+16:22:40.644 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+16:22:40.644 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 129.0
+16:22:40.644 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+
+16:35:46.857 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+16:35:46.861 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+16:35:46.861 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into console
+16:35:46.862 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+16:35:46.864 [main] ERROR com.solvd.laba.block1.task2_oop.DeliveryService - Invalid address format
+16:35:46.865 [main] ERROR com.solvd.laba.block1.task2_oop.DeliveryService - Error calculating delivery cost: Cannot invoke "com.solvd.laba.block1.task2_oop.Item.getWeight()" because the return value of "com.solvd.laba.block1.task2_oop.DeliveryOrder.getItem()" is null
+16:35:46.865 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into file
+16:35:46.866 [main] ERROR com.solvd.laba.block1.task2_oop.DeliveryService - Invalid address format
+16:35:46.866 [main] ERROR com.solvd.laba.block1.task2_oop.DeliveryService - Error calculating delivery cost: Cannot invoke "com.solvd.laba.block1.task2_oop.Item.getWeight()" because the return value of "com.solvd.laba.block1.task2_oop.DeliveryOrder.getItem()" is null
+16:35:46.866 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+
+17:45:47.015 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+17:45:47.017 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+17:45:47.017 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into console
+17:45:47.018 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+17:45:47.029 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+17:45:47.029 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 129.0
+17:45:47.029 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into file
+17:45:47.030 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+17:45:47.031 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 129.0
+17:45:47.031 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+
+17:49:11.453 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+17:49:11.455 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+17:49:11.455 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into console
+17:49:11.456 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+17:49:11.466 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+17:49:11.466 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 129.0
+17:49:11.467 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into file
+17:49:11.468 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+17:49:11.468 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 129.0
+17:49:11.468 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+
+17:52:00.928 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+17:52:00.930 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+17:52:00.930 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into console
+17:52:00.931 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+17:52:00.940 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+17:52:00.940 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 129.0
+17:52:00.940 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into file
+17:52:00.941 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+17:52:00.942 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 129.0
+17:52:00.942 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+

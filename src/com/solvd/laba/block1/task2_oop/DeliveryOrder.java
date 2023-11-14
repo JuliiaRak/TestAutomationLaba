@@ -4,10 +4,11 @@ import com.solvd.laba.block1.task2_oop.enums.DeliveryStatus;
 import com.solvd.laba.block1.task2_oop.enums.VehicleType;
 import com.solvd.laba.block1.task2_oop.exceptions.SettingCourierException;
 import com.solvd.laba.block1.task2_oop.interfaces.StatusChangeable;
+import com.solvd.laba.block1.task2_oop.interfaces.Trackable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class DeliveryOrder implements StatusChangeable {
+public class DeliveryOrder implements StatusChangeable, Trackable {
 
     private static final Logger logger = LogManager.getLogger(DeliveryOrder.class);
 
@@ -32,6 +33,11 @@ public class DeliveryOrder implements StatusChangeable {
         this.item = item;
         this.distance = distance;
         setCourier(item);
+    }
+
+    @Override
+    public void changeStatus(DeliveryStatus newStatus) {
+        this.deliveryStatus = newStatus;
     }
 
     public Courier getCourier() {
@@ -101,11 +107,6 @@ public class DeliveryOrder implements StatusChangeable {
     }
 
     @Override
-    public void changeStatus(DeliveryStatus newStatus) {
-        this.deliveryStatus = newStatus;
-    }
-
-    @Override
     public String toString() {
         return "Your delivery order details:\n" +
                 "Sender: " + sender.getFullName() +"\n" +
@@ -113,5 +114,10 @@ public class DeliveryOrder implements StatusChangeable {
                 "Item: " + item.getName() +"\n" +
                 "Distance: " + distance +"\n" +
                 "DeliveryStatus: " + deliveryStatus +"\n";
+    }
+
+    @Override
+    public DeliveryStatus trackDeliveryStatus() {
+        return deliveryStatus;
     }
 }

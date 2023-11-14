@@ -1,11 +1,15 @@
 package com.solvd.laba.block1.task2_oop;
 
 import com.solvd.laba.block1.task2_oop.exceptions.DeliveryCostCalculationException;
+import com.solvd.laba.block1.task2_oop.interfaces.IDeliveryCostCalculator;
 
-public class DeliveryCostCalculator {
-    public static double initialCost = Constants.BASE_COST;
+public class DeliveryCostCalculator implements IDeliveryCostCalculator {
+    public final double initialCost = Constants.BASE_COST;
 
-    public static double calculateDeliveryCost(DeliveryOrder order) throws DeliveryCostCalculationException {
+    public DeliveryCostCalculator(){
+    }
+
+    public double calculateDeliveryCost(DeliveryOrder order) throws DeliveryCostCalculationException {
         try {
             double distanceCost = order.getDistance()*2;
             double weightCost = order.getItem().getWeight()*10;
