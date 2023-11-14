@@ -1,11 +1,16 @@
-package com.solvd.laba.block1.task2_OOP;
+package com.solvd.laba.block1.task2_oop;
 
-import com.solvd.laba.block1.task2_OOP.enums.DeliveryStatus;
-import com.solvd.laba.block1.task2_OOP.enums.VehicleType;
-import com.solvd.laba.block1.task2_OOP.exceptions.SettingCourierException;
-import com.solvd.laba.block1.task2_OOP.interfaces.StatusChangeable;
+import com.solvd.laba.block1.task2_oop.enums.DeliveryStatus;
+import com.solvd.laba.block1.task2_oop.enums.VehicleType;
+import com.solvd.laba.block1.task2_oop.exceptions.SettingCourierException;
+import com.solvd.laba.block1.task2_oop.interfaces.StatusChangeable;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class DeliveryOrder implements StatusChangeable {
+
+    private static final Logger logger = LogManager.getLogger(DeliveryOrder.class);
+
     protected Customer sender;
     protected Customer recipient;
     protected Item item;
@@ -15,6 +20,7 @@ public class DeliveryOrder implements StatusChangeable {
 
     static {
         System.out.println("Creating a delivery order...\n");
+        logger.info("Creating a delivery order...\n");
     }
 
     public DeliveryOrder() {

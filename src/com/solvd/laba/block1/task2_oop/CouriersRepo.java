@@ -1,9 +1,8 @@
-package com.solvd.laba.block1.task2_OOP;
+package com.solvd.laba.block1.task2_oop;
 
-import com.solvd.laba.block1.task2_OOP.enums.VehicleType;
-import com.solvd.laba.block1.task2_OOP.exceptions.InvalidAddressException;
-import com.solvd.laba.block1.task2_OOP.exceptions.InvalidEmailException;
-import com.solvd.laba.block1.task2_OOP.exceptions.InvalidPhoneNumberException;
+import com.solvd.laba.block1.task2_oop.enums.VehicleType;
+import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
+import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
 
 public class CouriersRepo {
 

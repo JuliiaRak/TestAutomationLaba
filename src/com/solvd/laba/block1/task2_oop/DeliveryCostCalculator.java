@@ -1,6 +1,6 @@
-package com.solvd.laba.block1.task2_OOP;
+package com.solvd.laba.block1.task2_oop;
 
-import com.solvd.laba.block1.task2_OOP.exceptions.DeliveryCostCalculationException;
+import com.solvd.laba.block1.task2_oop.exceptions.DeliveryCostCalculationException;
 
 public class DeliveryCostCalculator {
     public static double initialCost = Constants.BASE_COST;

@@ -1,4 +1,4 @@
-package com.solvd.laba.block1.task2_OOP;
+package com.solvd.laba.block1.task2_oop;
 
 import java.io.FileWriter;
 import java.io.IOException;

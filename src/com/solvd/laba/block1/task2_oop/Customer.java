@@ -1,7 +1,7 @@
-package com.solvd.laba.block1.task2_OOP;
+package com.solvd.laba.block1.task2_oop;
 
-import com.solvd.laba.block1.task2_OOP.exceptions.InvalidEmailException;
-import com.solvd.laba.block1.task2_OOP.exceptions.InvalidPhoneNumberException;
+import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
+import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
 
 import java.util.Objects;
 

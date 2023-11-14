@@ -1,6 +1,6 @@
-package com.solvd.laba.block1.task2_OOP;
+package com.solvd.laba.block1.task2_oop;
 
-import com.solvd.laba.block1.task2_OOP.exceptions.InvalidAddressException;
+import com.solvd.laba.block1.task2_oop.exceptions.InvalidAddressException;
 
 public class Adress {
     private String city;

@@ -1,4 +1,4 @@
-package com.solvd.laba.block1.task1_JavaBasics;
+package com.solvd.laba.block1.task1_java_basics;
 
 public class UserInfo {
     public static void main(String[] args) {

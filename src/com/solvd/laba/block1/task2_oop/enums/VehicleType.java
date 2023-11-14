@@ -1,4 +1,4 @@
-package com.solvd.laba.block1.task2_OOP.enums;
+package com.solvd.laba.block1.task2_oop.enums;
 
 public enum VehicleType {
     TRUCK(8),

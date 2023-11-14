@@ -1,4 +1,4 @@
-package com.solvd.laba.block1.task2_OOP.exceptions;
+package com.solvd.laba.block1.task2_oop.exceptions;
 
 public class InvalidEmailException extends Exception {
     public InvalidEmailException(String message) {
