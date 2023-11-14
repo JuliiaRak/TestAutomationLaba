@@ -11,7 +11,7 @@ public class DeliveryService {
 
     static {
         System.out.println("Welcome to our delivery service!\n");
-        logger.info("Welcome to our delivery service!\n");
+        logger.info("Welcome to our delivery service!");
     }
 
     private static DeliveryOrder createNewOrder(){

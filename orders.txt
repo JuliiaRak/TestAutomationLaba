@@ -1,7 +1,0 @@
-Your delivery order details:
-Sender: Julia Rak
-Recipient: Marta Rak
-Item: Laptop
-Distance: 7.0
-DeliveryStatus: PENDING
-Delivery cost: 129.0

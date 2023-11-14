@@ -20,7 +20,7 @@ public class DeliveryOrder implements StatusChangeable {
 
     static {
         System.out.println("Creating a delivery order...\n");
-        logger.info("Creating a delivery order...\n");
+        logger.info("Creating a delivery order...");
     }
 
     public DeliveryOrder() {
