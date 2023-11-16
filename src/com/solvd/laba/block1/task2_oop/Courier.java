@@ -23,8 +23,8 @@ public class Courier extends Person {
 
     @Override
     public String toString() {
-        String parentString = super.toString();
-        return parentString + ", address: " + vehicle.toString();
+        String parentString = super.displayPersonalInformation();
+        return parentString + "; vehicle: " + vehicle.toString();
     }
 
 }

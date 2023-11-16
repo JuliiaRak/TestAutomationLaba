@@ -21,8 +21,8 @@ public class DeliveryService implements IDeliveryService {
         try {
             // Створення об'єктів і виклик конструкторів
             Item item1 = new Item("Laptop", 2.5);
-            Customer sender = new Customer(new FullName("Julia", "Rak"), "+380980207334", "juliarak@gmail.com", new Adress("Kyiv", "Shevchenka", "8a"));
-            Customer recipient = new Customer(new FullName("Marta", "Rak"), "+380676757226", "olenarak@gmail.com", new Adress("Kyiv", "Khreshchatyk", "5"));
+            Customer sender = new Customer(new FullName("Julia", "Rak"), "+380980207334", "juliarak@gmail.com", new Address("Kyiv", "Shevchenka", "8a"));
+            Customer recipient = new Customer(new FullName("Marta", "Rak"), "+380676757226", "olenarak@gmail.com", new Address("Kyiv", "Khreshchatyk", "5"));
             order = new DeliveryOrder(sender, recipient, item1, 7.0);
         } catch (SettingCourierException e) {
             System.err.println(e.getMessage());

@@ -2,12 +2,12 @@ package com.solvd.laba.block1.task2_oop;
 
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidAddressException;
 
-public class Adress {
+public class Address {
     private String city;
     private String street;
     private String building;
 
-    public Adress(String city, String street, String building) throws InvalidAddressException {
+    public Address(String city, String street, String building) throws InvalidAddressException {
         if (isValidAddress(city, street, building)) {
             this.city = city;
             this.street = street;
@@ -49,7 +49,7 @@ public class Adress {
 
     @Override
     public String toString() {
-        return "Adress: " +
+        return "Address: " +
                 "city " + city+
                 ", street " + street +
                 ", building " + building;

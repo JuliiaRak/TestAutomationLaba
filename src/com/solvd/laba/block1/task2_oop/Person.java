@@ -79,4 +79,8 @@ public abstract class Person {
                 ", phoneNumber: " + phoneNumber+
                 ", email: " + email;
     }
+
+    public final String displayPersonalInformation() {
+        return "Personal Information: " + toString();
+    }
 }

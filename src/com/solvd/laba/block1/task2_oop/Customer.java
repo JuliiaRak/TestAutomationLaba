@@ -6,18 +6,18 @@ import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
 import java.util.Objects;
 
 public class Customer extends Person {
-    private Adress address;
+    private Address address;
 
-    public Customer(FullName fullName, String phoneNumber, String email, Adress address) throws InvalidPhoneNumberException, InvalidEmailException {
+    public Customer(FullName fullName, String phoneNumber, String email, Address address) throws InvalidPhoneNumberException, InvalidEmailException {
         super(fullName, phoneNumber, email);
         this.address = address;
     }
 
-    public Adress getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(Adress address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
@@ -36,7 +36,7 @@ public class Customer extends Person {
 
     @Override
     public String toString() {
-        String parentString = super.toString();
-        return parentString + ", address: " + address.toString();
+        String parentString = super.displayPersonalInformation();
+        return parentString + "; address: " + address.toString();
     }
 }

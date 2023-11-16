@@ -5,12 +5,12 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
 
+    private static final Logger LOGGER = LogManager.getLogger(Main.class);
+    private static final DeliveryService DELIVERY_SERVICE = new DeliveryService();
+
     static {
         System.setProperty("log4j.configurationFile", "log4j2.xml");
     }
-
-    private static final Logger LOGGER = LogManager.getLogger(Main.class);
-    private static final DeliveryService DELIVERY_SERVICE = new DeliveryService();
 
     public static void main(String[] args) {
         LOGGER.info("PROGRAM STARTED");
