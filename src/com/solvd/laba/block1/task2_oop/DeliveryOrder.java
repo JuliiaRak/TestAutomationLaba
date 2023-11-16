@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 public class DeliveryOrder implements StatusChangeable, Trackable {
 
-    private static final Logger logger = LogManager.getLogger(DeliveryOrder.class);
+    private static final Logger LOGGER = LogManager.getLogger(DeliveryOrder.class);
 
     protected Customer sender;
     protected Customer recipient;
@@ -21,7 +21,7 @@ public class DeliveryOrder implements StatusChangeable, Trackable {
 
     static {
         System.out.println("Creating a delivery order...\n");
-        logger.info("Creating a delivery order...");
+        LOGGER.info("Creating a delivery order...");
     }
 
     public DeliveryOrder() {

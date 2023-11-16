@@ -9,13 +9,13 @@ public class Main {
         System.setProperty("log4j.configurationFile", "log4j2.xml");
     }
 
-    private static final Logger logger = LogManager.getLogger(Main.class);
-    private static final DeliveryService deliveryService = new DeliveryService();
+    private static final Logger LOGGER = LogManager.getLogger(Main.class);
+    private static final DeliveryService DELIVERY_SERVICE = new DeliveryService();
 
     public static void main(String[] args) {
-        logger.info("PROGRAM STARTED");
-        deliveryService.printInfo();
-        deliveryService.printInfoInFile();
-        logger.info("PROGRAM ENDED\n");
+        LOGGER.info("PROGRAM STARTED");
+        DELIVERY_SERVICE.printInfo();
+        DELIVERY_SERVICE.printInfoInFile();
+        LOGGER.info("PROGRAM ENDED\n");
     }
 }

@@ -8,12 +8,12 @@ import org.apache.logging.log4j.Logger;
 
 public class DeliveryService implements IDeliveryService {
 
-    private static final Logger logger = LogManager.getLogger(DeliveryService.class);
+    private static final Logger LOGGER = LogManager.getLogger(DeliveryService.class);
     private final DeliveryCostCalculator deliveryCostCalculator = new DeliveryCostCalculator();
 
     public DeliveryService (){
         System.out.println("Welcome to our delivery service!\n");
-        logger.info("Welcome to our delivery service!");
+        LOGGER.info("Welcome to our delivery service!");
     }
 
     private DeliveryOrder createNewOrder(){
@@ -26,23 +26,23 @@ public class DeliveryService implements IDeliveryService {
             order = new DeliveryOrder(sender, recipient, item1, 7.0);
         } catch (SettingCourierException e) {
             System.err.println(e.getMessage());
-            logger.error(e.getMessage());
+            LOGGER.error(e.getMessage());
         } catch (InvalidAddressException e) {
             System.err.println(e.getMessage());
-            logger.error(e.getMessage());
+            LOGGER.error(e.getMessage());
         } catch (InvalidPhoneNumberException e) {
             System.err.println(e.getMessage());
-            logger.error(e.getMessage());
+            LOGGER.error(e.getMessage());
         } catch (InvalidEmailException e) {
             System.err.println(e.getMessage());
-            logger.error(e.getMessage());
+            LOGGER.error(e.getMessage());
         }
         return order;
     }
 
     @Override
     public void printInfo() {
-        logger.info("Printing order info into console");
+        LOGGER.info("Printing order info into console");
         try {
             // Створення об'єктів і виклик конструкторів
             DeliveryOrder order = createNewOrder();
@@ -53,17 +53,17 @@ public class DeliveryService implements IDeliveryService {
             // Виведення основної інформації
             System.out.printf(order.toString());
             System.out.println("Delivery cost: " + cost);
-            logger.info("Printing delivery order details");
-            logger.info("Delivery cost: " + cost);
+            LOGGER.info("Printing delivery order details");
+            LOGGER.info("Delivery cost: " + cost);
         } catch (DeliveryCostCalculationException e) {
             System.err.println(e.getMessage());
-            logger.error(e.getMessage());
+            LOGGER.error(e.getMessage());
         }
     }
 
     @Override
     public void printInfoInFile() {
-        logger.info("Printing order info into file");
+        LOGGER.info("Printing order info into file");
         try (DeliveryOrderFileWriter orderWriter = new DeliveryOrderFileWriter("orders.txt")) {
             // Створення об'єктів і виклик конструкторів
             DeliveryOrder order = createNewOrder();
@@ -74,14 +74,14 @@ public class DeliveryService implements IDeliveryService {
             // Запис основної інформації в файл
             orderWriter.write(order.toString());
             orderWriter.write("Delivery cost: " + cost);
-            logger.info("Printing delivery order details");
-            logger.info("Delivery cost: " + cost);
+            LOGGER.info("Printing delivery order details");
+            LOGGER.info("Delivery cost: " + cost);
         } catch (DeliveryCostCalculationException e) {
             System.err.println(e.getMessage());
-            logger.error(e.getMessage());
+            LOGGER.error(e.getMessage());
         } catch (IOException e) {
             System.err.println(e.getMessage());
-            logger.error(e.getMessage());
+            LOGGER.error(e.getMessage());
         }
     }
 }
