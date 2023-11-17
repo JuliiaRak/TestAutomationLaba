@@ -10,13 +10,13 @@ public class DeliveryCostCalculator implements IDeliveryCostCalculator {
     }
 
     public double calculateDeliveryCost(DeliveryOrder order) throws DeliveryCostCalculationException {
-        try {
+        if (order == null) {
+            throw new DeliveryCostCalculationException("Error calculating delivery cost (order can not be null)");
+        } else {
             double distanceCost = order.getDistance()*2;
             double weightCost = order.getItem().getWeight()*10;
             double courierCost = order.getCourier().getVehicle().getСoefficient()*10;
             return initialCost + weightCost + distanceCost + courierCost;
-        } catch (Exception e) {
-            throw new DeliveryCostCalculationException("Error calculating delivery cost: " + e.getMessage());
         }
     }
 }
