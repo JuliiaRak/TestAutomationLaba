@@ -61,7 +61,7 @@ public class DeliveryOrder implements StatusChangeable, Trackable {
         }
         if (foundCourier == null) {
             // Якщо не знайдено кур'єра для вказаного типу транспорту, викидайте виняток
-            throw new SettingCourierException("No suitable courier found for the specified vehicle type.");
+            throw new SettingCourierException("No suitable courier found for the specified vehicle type to carry order with weight " + item.getWeight());
         }
         this.courier = foundCourier;
     }

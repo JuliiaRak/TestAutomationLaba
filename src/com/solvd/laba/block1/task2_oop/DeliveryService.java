@@ -24,18 +24,14 @@ public class DeliveryService implements IDeliveryService {
             Customer sender = new Customer(new FullName("Julia", "Rak"), "+380980207334", "juliarak@gmail.com", new Address("Kyiv", "Shevchenka", "8a"));
             Customer recipient = new Customer(new FullName("Marta", "Rak"), "+380676757226", "olenarak@gmail.com", new Address("Kyiv", "Khreshchatyk", "5"));
             order = new DeliveryOrder(sender, recipient, item1, 7.0);
-        } catch (SettingCourierException e) {
-            System.err.println(e.getMessage());
+        } catch (InvalidAddressException |
+                 InvalidPhoneNumberException |
+                 InvalidEmailException e) {
             LOGGER.error(e.getMessage());
-        } catch (InvalidAddressException e) {
-            System.err.println(e.getMessage());
+        } catch (SettingCourierException e){
             LOGGER.error(e.getMessage());
-        } catch (InvalidPhoneNumberException e) {
-            System.err.println(e.getMessage());
-            LOGGER.error(e.getMessage());
-        } catch (InvalidEmailException e) {
-            System.err.println(e.getMessage());
-            LOGGER.error(e.getMessage());
+            System.out.println("Sorry, there is no courier found that can carry your order with weight "
+                    + order.getItem().getWeight() + ". Please change the weight of your item.");
         }
         return order;
     }
@@ -56,7 +52,6 @@ public class DeliveryService implements IDeliveryService {
             LOGGER.info("Printing delivery order details");
             LOGGER.info("Delivery cost: " + cost);
         } catch (DeliveryCostCalculationException e) {
-            System.err.println(e.getMessage());
             LOGGER.error(e.getMessage());
         }
     }
@@ -77,11 +72,9 @@ public class DeliveryService implements IDeliveryService {
             LOGGER.info("Printing delivery order details");
             LOGGER.info("Delivery cost: " + cost);
         } catch (DeliveryCostCalculationException e) {
-            System.err.println(e.getMessage());
             LOGGER.error(e.getMessage());
         } catch (IOException e) {
-            System.err.println(e.getMessage());
-            LOGGER.error(e.getMessage());
+            LOGGER.error("Error reading and writing to file in DeliveryService class" + e.getMessage());
         }
     }
 }

@@ -3,8 +3,12 @@ package com.solvd.laba.block1.task2_oop;
 import com.solvd.laba.block1.task2_oop.enums.VehicleType;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class CouriersRepo {
+
+    private static final Logger LOGGER = LogManager.getLogger(DeliveryService.class);
 
     static Courier courierWithCar;
     static Courier courierWithTruck;
@@ -17,10 +21,8 @@ public class CouriersRepo {
             courierWithTruck = new Courier(new FullName("Oleh", "Ovharcyn"), "+380973528462", "oleh@gmail.com", VehicleType.TRUCK);
             courierWithMoto = new Courier(new FullName("Stepan", "Bys"), "+380672605773", "stepan@gmail.com", VehicleType.MOTORCYCLE);
             courierWithBicycle = new Courier(new FullName("Denys", "Derh"), "+380982640638", "denys@gmail.com", VehicleType.BICYCLE);
-            } catch (InvalidPhoneNumberException e) {
-                System.err.println(e.getMessage());
-            } catch (InvalidEmailException e) {
-                System.err.println(e.getMessage());
+            } catch (InvalidPhoneNumberException | InvalidEmailException e) {
+                LOGGER.error(e.getMessage());
             }
     }
 
