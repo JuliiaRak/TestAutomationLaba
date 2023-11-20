@@ -2,23 +2,24 @@ package com.solvd.laba.block1.task2_oop;
 
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
-
+import com.solvd.laba.block1.task2_oop.exceptions.ObjectNotFoundExeption;
+import java.util.Iterator;
 import java.util.Objects;
 
 public class Customer extends Person {
-    private Address address;
+    private CustomLinkedList<Address> addresses;
 
-    public Customer(FullName fullName, String phoneNumber, String email, Address address) throws InvalidPhoneNumberException, InvalidEmailException {
+    public Customer(FullName fullName, String phoneNumber, String email) throws InvalidPhoneNumberException, InvalidEmailException {
         super(fullName, phoneNumber, email);
-        this.address = address;
+        this.addresses = new CustomLinkedList<>();
     }
 
-    public Address getAddress() {
-        return address;
+    public void addAddress(Address address) {
+        this.addresses.add(address);
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public CustomLinkedList<Address> getAddresses() {
+        return this.addresses;
     }
 
     @Override
@@ -26,17 +27,17 @@ public class Customer extends Person {
         if (this == o) return true;
         if (!(o instanceof Customer customer)) return false;
         if (!super.equals(o)) return false;
-        return Objects.equals(getAddress(), customer.getAddress());
+        return Objects.equals(getAddresses(), customer.getAddresses());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getAddress());
+        return Objects.hash(super.hashCode(), getAddresses());
     }
 
     @Override
     public String toString() {
         String parentString = super.displayPersonalInformation();
-        return parentString + "; address: " + address.toString();
+        return parentString;
     }
 }
