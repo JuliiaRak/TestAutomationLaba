@@ -97,3 +97,14 @@
 22:18:17.710 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 125.0
 22:18:17.710 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
 
+23:19:57.904 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+23:19:57.908 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+23:19:57.908 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into console
+23:19:57.909 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+23:19:57.920 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+23:19:57.920 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 125.0
+23:19:57.920 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into file
+23:19:57.922 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+23:19:57.922 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 125.0
+23:19:57.923 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+
