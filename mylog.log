@@ -108,3 +108,16 @@
 23:19:57.922 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 125.0
 23:19:57.923 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
 
+21:12:36.823 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+21:12:36.827 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+21:12:36.827 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into console
+21:12:36.828 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+21:12:36.840 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+21:12:36.840 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 125.0
+21:12:36.840 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order info into file
+21:12:36.843 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+21:12:36.843 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 125.0
+21:12:36.843 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+
+21:54:52.889 [main] ERROR com.solvd.laba.block1.task2_oop.DeliveryService - Error in UniqueWords classyourFile.txt
+21:55:39.123 [main] ERROR com.solvd.laba.block1.task2_oop.DeliveryService - Error in UniqueWords class java.txt
