@@ -1,13 +1,11 @@
 package com.solvd.laba.block1.task2_oop.repos;
 
-import com.solvd.laba.block1.task2_oop.Customer;
 import com.solvd.laba.block1.task2_oop.DeliveryService;
 import com.solvd.laba.block1.task2_oop.Item;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class ItemsRepo {

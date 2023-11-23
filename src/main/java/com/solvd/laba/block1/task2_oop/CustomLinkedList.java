@@ -4,11 +4,6 @@ public class CustomLinkedList<T> {
     private Node<T> head;
     private int size;
 
-    public CustomLinkedList() {
-        this.head = null;
-        this.size = 0;
-    }
-
     public void add(T data) {
         Node<T> newNode = new Node<>(data);
         if (head == null) {

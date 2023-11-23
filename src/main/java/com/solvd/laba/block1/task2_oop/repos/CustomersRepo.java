@@ -7,7 +7,6 @@ import com.solvd.laba.block1.task2_oop.FullName;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidAddressException;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
-import com.solvd.laba.block1.task2_oop.exceptions.ObjectNotFoundExeption;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

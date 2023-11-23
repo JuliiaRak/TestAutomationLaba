@@ -2,8 +2,7 @@ package com.solvd.laba.block1.task2_oop;
 
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
-import com.solvd.laba.block1.task2_oop.exceptions.ObjectNotFoundExeption;
-import java.util.Iterator;
+
 import java.util.Objects;
 
 public class Customer extends Person {

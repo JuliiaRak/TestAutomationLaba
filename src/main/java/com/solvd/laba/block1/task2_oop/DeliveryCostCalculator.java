@@ -3,8 +3,6 @@ package com.solvd.laba.block1.task2_oop;
 import com.solvd.laba.block1.task2_oop.exceptions.ObjectNotFoundExeption;
 import com.solvd.laba.block1.task2_oop.interfaces.IDeliveryCostCalculator;
 
-import java.util.LinkedList;
-
 public class DeliveryCostCalculator implements IDeliveryCostCalculator {
     public final double initialCost = Constants.BASE_COST;
 
