@@ -119,5 +119,3 @@
 21:12:36.843 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 125.0
 21:12:36.843 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
 
-21:54:52.889 [main] ERROR com.solvd.laba.block1.task2_oop.DeliveryService - Error in UniqueWords classyourFile.txt
-21:55:39.123 [main] ERROR com.solvd.laba.block1.task2_oop.DeliveryService - Error in UniqueWords class java.txt

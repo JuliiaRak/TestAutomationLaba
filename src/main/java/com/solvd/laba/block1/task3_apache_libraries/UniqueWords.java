@@ -15,7 +15,7 @@ import java.util.Set;
 
 public class UniqueWords {
 
-    private static final Logger LOGGER = LogManager.getLogger(DeliveryService.class);
+    private static final Logger LOGGER = LogManager.getLogger(UniqueWords.class);
 
     public static void main(String[] args) {
         try {
