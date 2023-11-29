@@ -26,10 +26,10 @@ public class CouriersRepo {
 
     static {
         try {
-            courierWithCar = new Courier(new FullName("Alex", "Yemets"), "+380673962558", "alex@gmail.com", VehicleType.CAR);
-            courierWithTruck = new Courier(new FullName("Oleh", "Ovharcyn"), "+380973528462", "oleh@gmail.com", VehicleType.TRUCK);
-            courierWithMoto = new Courier(new FullName("Stepan", "Bys"), "+380672605773", "stepan@gmail.com", VehicleType.MOTORCYCLE);
-            courierWithBicycle = new Courier(new FullName("Denys", "Derh"), "+380982640638", "denys@gmail.com", VehicleType.BICYCLE);
+            courierWithCar = new Courier(new FullName("Alex", "Yemets"), "+380673962558", "alex@gmail.com", VehicleType.CAR, 4.5);
+            courierWithTruck = new Courier(new FullName("Oleh", "Ovharcyn"), "+380973528462", "oleh@gmail.com", VehicleType.TRUCK, 4.0);
+            courierWithMoto = new Courier(new FullName("Stepan", "Bys"), "+380672605773", "stepan@gmail.com", VehicleType.MOTORCYCLE, 3.5);
+            courierWithBicycle = new Courier(new FullName("Denys", "Derh"), "+380982640638", "denys@gmail.com", VehicleType.BICYCLE, 3.0);
             } catch (InvalidPhoneNumberException | InvalidEmailException e) {
                 LOGGER.error(e.getMessage());
             }
@@ -54,5 +54,15 @@ public class CouriersRepo {
 
     public static List<Courier> getCouriers(VehicleType vehicleType){
         return courierMap.get(vehicleType);
+    }
+
+    public static List<Courier> getCouriers() {
+        List<Courier> allCouriers = new ArrayList<>();
+
+        for (List<Courier> couriers : courierMap.values()) {
+            allCouriers.addAll(couriers);
+        }
+
+        return allCouriers;
     }
 }

@@ -9,10 +9,12 @@ public class Courier extends Person {
     private Role role = Role.COURIER;
     private VehicleType vehicle;
     private Boolean isFree = true;
+    private double deliveryRating;
 
-    public Courier(FullName fullName, String phoneNumber, String email, VehicleType vehicle) throws InvalidPhoneNumberException, InvalidEmailException {
+    public Courier(FullName fullName, String phoneNumber, String email, VehicleType vehicle, double deliveryRating) throws InvalidPhoneNumberException, InvalidEmailException {
         super(fullName, phoneNumber, email);
         this.vehicle = vehicle;
+        this.deliveryRating = deliveryRating;
     }
 
     public Role getRole() {
@@ -39,11 +41,18 @@ public class Courier extends Person {
         this.isFree = false;
     }
 
+    public double getDeliveryRating() {
+        return deliveryRating;
+    }
+
+    public void setDeliveryRating(double deliveryRating) {
+        this.deliveryRating = deliveryRating;
+    }
 
     @Override
     public String toString() {
-        String parentString = super.displayPersonalInformation();
-        return parentString + "; vehicle: " + vehicle.toString();
+        return super.toString() + "; vehicle: " + vehicle +
+                "; rating: " + deliveryRating;
     }
 
 

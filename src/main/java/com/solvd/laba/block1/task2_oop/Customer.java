@@ -46,7 +46,6 @@ public class Customer extends Person {
 
     @Override
     public String toString() {
-        String parentString = super.displayPersonalInformation();
-        return parentString;
+        return super.toString();
     }
 }

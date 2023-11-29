@@ -54,7 +54,7 @@ public class DeliveryOrder implements StatusChangeable, Trackable {
         return courier;
     }
 
-    public void setCourier(List<Item> items) throws SettingCourierException{
+    public void setCourier(List<Item> items) throws SettingCourierException {
         VehicleType vehicleType;
         double orderWeight = getOrderWeight();
 
@@ -64,6 +64,10 @@ public class DeliveryOrder implements StatusChangeable, Trackable {
         else if (orderWeight >= 10 && orderWeight <= 30) vehicleType = VehicleType.TRUCK;
         else vehicleType = null;
 
+        this.courier = findMostPropriateCourier(vehicleType, orderWeight);
+    }
+
+    public Courier findMostPropriateCourier(VehicleType vehicleType, double orderWeight) throws SettingCourierException {
         Courier foundCourier = null;
         for (Courier courier : CouriersRepo.getCouriers(vehicleType)) {
             if (courier.getIsFree() == true) {
@@ -75,7 +79,7 @@ public class DeliveryOrder implements StatusChangeable, Trackable {
             // Якщо не знайдено кур'єра для вказаного типу транспорту, викидайте виняток
             throw new SettingCourierException("No suitable courier found for the specified vehicle type to carry order with weight " + orderWeight);
         }
-        this.courier = foundCourier;
+        return foundCourier;
     }
 
     public Customer getSender() {
