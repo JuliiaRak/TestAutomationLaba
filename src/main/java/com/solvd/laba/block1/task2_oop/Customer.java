@@ -1,16 +1,26 @@
 package com.solvd.laba.block1.task2_oop;
 
+import com.solvd.laba.block1.task2_oop.enums.Role;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
 
 import java.util.Objects;
 
 public class Customer extends Person {
+    private Role role = Role.CUSTOMER;
     private CustomLinkedList<Address> addresses;
 
     public Customer(FullName fullName, String phoneNumber, String email) throws InvalidPhoneNumberException, InvalidEmailException {
         super(fullName, phoneNumber, email);
         this.addresses = new CustomLinkedList<>();
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public void addAddress(Address address) {

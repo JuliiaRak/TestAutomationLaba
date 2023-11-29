@@ -2,6 +2,7 @@ package com.solvd.laba.block1.task2_oop.repos;
 
 import com.solvd.laba.block1.task2_oop.DeliveryService;
 import com.solvd.laba.block1.task2_oop.Item;
+import com.solvd.laba.block1.task2_oop.enums.ItemType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,8 +16,8 @@ public class ItemsRepo {
     private List<Item> items = new ArrayList<>();
 
     public ItemsRepo(){
-        Item item1 = new Item("Laptop", 2.5);
-        Item item2 = new Item("Backpack", 1);
+        Item item1 = new Item(ItemType.ELECTRONICS, "Laptop", 2.5);
+        Item item2 = new Item(ItemType.CLOTHING, "Shirt", 0.5);
         items.add(item1);
         items.add(item2);
     }

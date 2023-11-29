@@ -1,6 +1,7 @@
 package com.solvd.laba.block1.task2_oop;
 
 import com.solvd.laba.block1.task2_oop.enums.DeliveryStatus;
+import com.solvd.laba.block1.task2_oop.enums.PaymentStatus;
 import com.solvd.laba.block1.task2_oop.enums.VehicleType;
 import com.solvd.laba.block1.task2_oop.exceptions.SettingCourierException;
 import com.solvd.laba.block1.task2_oop.interfaces.StatusChangeable;
@@ -23,7 +24,8 @@ public class DeliveryOrder implements StatusChangeable, Trackable {
     protected List<Item> items;
     protected Courier courier;
     protected double distance;
-    protected DeliveryStatus deliveryStatus = Constants.DEFAULT_STATUS;
+    protected DeliveryStatus deliveryStatus = Constants.DEFAULT_DELIVERY_STATUS;
+    protected PaymentStatus paymentStatus = Constants.DEFAULT_PAYMENT_STATUS;
 
     static {
         System.out.println("Creating a delivery order...\n");
@@ -144,7 +146,7 @@ public class DeliveryOrder implements StatusChangeable, Trackable {
     public String toString() {
         StringBuilder itemsString = new StringBuilder();
         for (Item item : items) {
-            itemsString.append(item.getName()).append(", ");
+            itemsString.append(item.getName() + " (" + item.getItemType().getItemTypeName() + ")").append(", ");
         }
         // Видаляємо останню кому та пробіл, якщо є хоча б один предмет
         if (!items.isEmpty()) {
@@ -158,7 +160,8 @@ public class DeliveryOrder implements StatusChangeable, Trackable {
                 "Address delivery to: " +  getOrderedToAddress() +"\n" +
                 "Items: " + itemsString +"\n" +
                 "Distance: " + distance +"\n" +
-                "DeliveryStatus: " + deliveryStatus +"\n";
+                "DeliveryStatus: " + deliveryStatus +"\n" +
+                "Payment Status: " + paymentStatus +"\n";
     }
 
     @Override

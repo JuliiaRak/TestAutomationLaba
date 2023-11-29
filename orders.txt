@@ -3,7 +3,8 @@ Sender: Julia Rak
 Address delivery from: Kyiv city, Shevchenka street, 8a building
 Recipient: Marta Rak
 Address delivery to: Rivne city, Shevchenka street, 5 building
-Items: Laptop, Backpack
+Items: Laptop (Electronics), Shirt (Clothing)
 Distance: 10.0
 DeliveryStatus: PENDING
-Delivery cost: 125.0
+Payment Status: PENDING
+Delivery cost: 120.0
