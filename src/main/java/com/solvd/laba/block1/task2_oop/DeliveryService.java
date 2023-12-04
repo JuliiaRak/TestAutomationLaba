@@ -14,7 +14,6 @@ import java.io.IOException;
 public class DeliveryService {
 
     private static final Logger LOGGER = LogManager.getLogger(DeliveryService.class);
-    private final DeliveryCostCalculator deliveryCostCalculator = new DeliveryCostCalculator();
     private CustomersRepo customerRepo = new CustomersRepo();
     private ItemsRepo itemsRepo = new ItemsRepo();
 
@@ -51,7 +50,7 @@ public class DeliveryService {
             DeliveryOrder order = createNewOrder();
 
             // Визначення вартості доставки
-            double cost = deliveryCostCalculator.calculateDeliveryCost(order);
+            double cost = DeliveryCostCalculator.calculateDeliveryCost(order);
 
             // Запис основної інформації в файл
             printer.printInfo();
@@ -67,11 +66,8 @@ public class DeliveryService {
 
     public void processCustomOrder(DeliveryOrder order, OrderProcessor customOrderProcessor) {
         if (customOrderProcessor != null) {
-            customOrderProcessor.processOrder(order);
+            customOrderProcessor.processOrder(order, "Julia Rak", "Enums. Lambda");
         }
     }
 
-    public DeliveryCostCalculator getDeliveryCostCalculator() {
-        return deliveryCostCalculator;
-    }
 }

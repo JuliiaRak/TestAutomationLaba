@@ -376,3 +376,51 @@
 00:13:52.694 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 130.0
 00:13:52.699 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
 
+13:25:50.611 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+13:25:50.614 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+13:25:50.614 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order
+13:25:50.617 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+13:25:50.629 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+13:25:50.629 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 130.0
+13:25:50.630 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order
+13:25:50.630 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+13:25:50.630 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 130.0
+13:25:50.635 [main] ERROR com.solvd.laba.block1.task2_oop.Main - Invalid phone number format
+13:25:50.637 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+
+13:44:56.642 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+13:44:56.645 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+13:44:56.646 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order
+13:44:56.648 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+13:44:56.660 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+13:44:56.660 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 130.0
+13:44:56.660 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order
+13:44:56.661 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+13:44:56.661 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 130.0
+13:44:56.667 [main] ERROR com.solvd.laba.block1.task2_oop.Main - Invalid phone number format
+13:44:56.668 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+
+13:58:34.487 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+13:58:34.491 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+13:58:34.491 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order
+13:58:34.493 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+13:58:34.506 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+13:58:34.506 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 130.0
+13:58:34.507 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order
+13:58:34.507 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+13:58:34.507 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 130.0
+13:58:34.513 [main] ERROR com.solvd.laba.block1.task2_oop.Main - Invalid phone number format
+13:58:34.514 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+
+13:59:03.708 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Welcome to our delivery service!
+13:59:03.712 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM STARTED
+13:59:03.713 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order
+13:59:03.714 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryOrder - Creating a delivery order...
+13:59:03.727 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+13:59:03.727 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 130.0
+13:59:03.727 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing order
+13:59:03.728 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Printing delivery order details
+13:59:03.728 [main] INFO  com.solvd.laba.block1.task2_oop.DeliveryService - Delivery cost: 130.0
+13:59:03.735 [main] ERROR com.solvd.laba.block1.task2_oop.Main - Invalid phone number format
+13:59:03.736 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
+
