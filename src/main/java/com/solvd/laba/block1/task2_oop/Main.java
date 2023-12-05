@@ -2,8 +2,8 @@ package com.solvd.laba.block1.task2_oop;
 
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
+import com.solvd.laba.block1.task2_oop.interfaces.TriFunctionOrderProcessor;
 import com.solvd.laba.block1.task2_oop.repos.CouriersRepo;
-import org.apache.commons.lang3.function.TriFunction;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -46,17 +46,17 @@ public class Main {
         System.out.println();
 
         DeliveryOrder myOrder = DELIVERY_SERVICE.createNewOrder();
-        DELIVERY_SERVICE.processCustomOrder(myOrder, (order, author, task) -> {
-                System.out.println("Custom lambda order processing in class: " + order.getClass()
-                        + ", author: " + author + ", task: " + task  + "\n");
+        DELIVERY_SERVICE.processCustomOrder(myOrder, (order, info, author) -> {
+                System.out.println("Custom lambda order processing in order: " + order.getClass()
+                        + ", additional info: " + info + ", author: " + author  + "\n");
             }
         );
 
-        TriFunction<String, Integer, Double, String> TriFunctionOrderProcessor = (productName, quantity, price) -> {
+        TriFunctionOrderProcessor<String, Integer, Double, String> triFunctionOrderProcessor = (productName, quantity, price) -> {
             double totalCost = quantity * price;
             return "(myTriFunction interface) PRODUCT: " + productName + ", quantity: " + quantity + ", total cost: " + totalCost;
         };
-        String result = TriFunctionOrderProcessor.apply("Laptop", 2, 1200.0);
+        String result = triFunctionOrderProcessor.apply("Laptop", 2, 1200.0);
         System.out.println(result);
         System.out.println();
 

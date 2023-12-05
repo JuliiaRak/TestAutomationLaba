@@ -66,7 +66,7 @@ public class DeliveryService {
 
     public void processCustomOrder(DeliveryOrder order, OrderProcessor customOrderProcessor) {
         if (customOrderProcessor != null) {
-            customOrderProcessor.processOrder(order, "Julia Rak", "Enums. Lambda");
+            customOrderProcessor.processOrder(order, "change address", "JuliaRak");
         }
     }
 
