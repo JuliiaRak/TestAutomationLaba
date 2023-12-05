@@ -9,10 +9,8 @@ import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class CouriersRepo {
 
@@ -52,17 +50,27 @@ public class CouriersRepo {
         }
     }
 
+    public static List<Courier> getCouriers() {
+        return courierMap.values().stream()
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
+    }
+
     public static List<Courier> getCouriers(VehicleType vehicleType){
         return courierMap.get(vehicleType);
     }
 
-    public static List<Courier> getCouriers() {
-        List<Courier> allCouriers = new ArrayList<>();
+    public static Optional<Courier> findFirstFreeCourierByType(VehicleType vehicleType) {
+        return courierMap.values().stream()
+                .flatMap(List::stream)
+                .filter(courier -> courier.getVehicle() == vehicleType && courier.getIsFree())
+                .findFirst();
+    }
 
-        for (List<Courier> couriers : courierMap.values()) {
-            allCouriers.addAll(couriers);
-        }
-
-        return allCouriers;
+    public static List<Courier> sortedCouriersByRating() {
+        return courierMap.values().stream()
+                .flatMap(List::stream)
+                .sorted(Comparator.comparingDouble(Courier::getDeliveryRating).reversed())
+                .collect(Collectors.toList());
     }
 }

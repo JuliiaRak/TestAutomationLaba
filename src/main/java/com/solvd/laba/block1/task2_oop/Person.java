@@ -11,6 +11,10 @@ public abstract class Person {
     protected String phoneNumber;
     protected String email;
 
+    public Person(FullName fullName) {
+        this.fullName = fullName;
+    }
+
     public Person(FullName fullName, String phoneNumber, String email) throws InvalidPhoneNumberException, InvalidEmailException {
         this.fullName = fullName;
         if (isValidPhoneNumber(phoneNumber)) {

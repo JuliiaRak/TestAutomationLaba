@@ -4,8 +4,4 @@ public enum Role {
     CUSTOMER,
     COURIER,
     ADMIN;
-
-    static {
-        System.out.println("Role enum is loaded.");
-    }
 }

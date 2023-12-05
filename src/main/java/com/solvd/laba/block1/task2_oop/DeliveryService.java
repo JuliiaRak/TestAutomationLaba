@@ -10,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
+import java.util.List;
 
 public class DeliveryService {
 
@@ -25,6 +26,7 @@ public class DeliveryService {
     public DeliveryOrder createNewOrder(){
         DeliveryOrder order = new DeliveryOrder();
         try {
+            List<Address> addresses = customerRepo.getAllCustomerAddresses();
             Customer sender = customerRepo.getCustomers().get(0);
             Customer recipient = customerRepo.getCustomers().get(1);
             Item item1 = itemsRepo.getItems().get(0);

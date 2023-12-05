@@ -68,18 +68,10 @@ public class DeliveryOrder implements StatusChangeable, Trackable {
     }
 
     public Courier findMostPropriateCourier(VehicleType vehicleType, double orderWeight) throws SettingCourierException {
-        Courier foundCourier = null;
-        for (Courier courier : CouriersRepo.getCouriers(vehicleType)) {
-            if (courier.getIsFree() == true) {
-                foundCourier = courier;
-                break;
-            }
-        }
-        if (foundCourier == null) {
-            // Якщо не знайдено кур'єра для вказаного типу транспорту, викидайте виняток
-            throw new SettingCourierException("No suitable courier found for the specified vehicle type to carry order with weight " + orderWeight);
-        }
-        return foundCourier;
+        return CouriersRepo.getCouriers(vehicleType).stream()
+                .filter(courier -> courier.getIsFree())
+                .findFirst()
+                .orElseThrow(() -> new SettingCourierException("No suitable courier found for the specified vehicle type to carry order with weight " + orderWeight));
     }
 
     public Customer getSender() {
@@ -139,11 +131,9 @@ public class DeliveryOrder implements StatusChangeable, Trackable {
     }
 
     public double getOrderWeight(){
-        double orderWeight = 0;
-        for (Item item : items){
-            orderWeight += item.getWeight();
-        }
-        return  orderWeight;
+        return items.stream()
+                .mapToDouble(Item::getWeight)
+                .sum();
     }
 
     @Override

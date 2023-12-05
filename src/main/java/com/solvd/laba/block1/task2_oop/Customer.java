@@ -4,15 +4,22 @@ import com.solvd.laba.block1.task2_oop.enums.Role;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Customer extends Person {
     private Role role = Role.CUSTOMER;
-    private CustomLinkedList<Address> addresses;
+    private List<Address> addresses;
+
+    private Customer(FullName fullName) {
+        super(fullName);
+        this.addresses = new ArrayList<>();
+    }
 
     public Customer(FullName fullName, String phoneNumber, String email) throws InvalidPhoneNumberException, InvalidEmailException {
         super(fullName, phoneNumber, email);
-        this.addresses = new CustomLinkedList<>();
+        this.addresses = new ArrayList<>();
     }
 
     public Role getRole() {
@@ -27,7 +34,7 @@ public class Customer extends Person {
         this.addresses.add(address);
     }
 
-    public CustomLinkedList<Address> getAddresses() {
+    public List<Address> getAddresses() {
         return this.addresses;
     }
 

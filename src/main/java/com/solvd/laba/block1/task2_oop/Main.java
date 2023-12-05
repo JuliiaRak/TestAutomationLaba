@@ -1,5 +1,6 @@
 package com.solvd.laba.block1.task2_oop;
 
+import com.solvd.laba.block1.task2_oop.enums.VehicleType;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidEmailException;
 import com.solvd.laba.block1.task2_oop.exceptions.InvalidPhoneNumberException;
 import com.solvd.laba.block1.task2_oop.interfaces.TriFunctionOrderProcessor;
@@ -8,9 +9,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -60,7 +62,17 @@ public class Main {
         System.out.println(result);
         System.out.println();
 
+        Optional<Courier> courierWithByke = CouriersRepo.findFirstFreeCourierByType(VehicleType.BICYCLE);
+        System.out.println(courierWithByke.get());
+        System.out.println();
+
+        List<Courier> couriersByRating = CouriersRepo.sortedCouriersByRating();
+        couriersByRating.stream()
+                .forEach(courier -> System.out.println("Courier: " + courier.getFullName() + ", Rating: " + courier.getDeliveryRating()));
+        System.out.println();
+
         useLambdas();
+
         LOGGER.info("PROGRAM ENDED\n");
     }
 
@@ -112,20 +124,15 @@ public class Main {
     }
 
     public static List<Courier> updateCouriers(List<Courier> couriers, Function<Courier, Courier> updateFunction) {
-        for (int i = 0; i < couriers.size(); i++) {
-            couriers.set(i, updateFunction.apply(couriers.get(i)));
-        }
-        return couriers;
+        return couriers.stream()
+                .map(updateFunction)
+                .collect(Collectors.toList());
     }
 
     public static List<Courier> filterCouriersByRating(List<Courier> couriers, Predicate<Courier> predicate) {
-        List<Courier> filteredCouriers = new ArrayList<>();
-        for (Courier courier : couriers) {
-            if (predicate.test(courier)) {
-                filteredCouriers.add(courier);
-            }
-        }
-        return filteredCouriers;
+        return couriers.stream()
+                .filter(predicate)
+                .collect(Collectors.toList());
     }
 
     public static DeliveryOrder createCustomOrder(Supplier<DeliveryOrder> createOrderSupplier) {

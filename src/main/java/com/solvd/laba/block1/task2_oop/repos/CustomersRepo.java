@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CustomersRepo {
 
@@ -46,5 +47,11 @@ public class CustomersRepo {
 
     public List<Customer> getCustomers() {
         return customers;
+    }
+
+    public List<Address> getAllCustomerAddresses() {
+        return customers.stream()
+                .flatMap(customer -> customer.getAddresses().stream())
+                .collect(Collectors.toList());
     }
 }
