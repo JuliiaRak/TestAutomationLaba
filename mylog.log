@@ -460,3 +460,27 @@
 18:42:52.678 [main] ERROR com.solvd.laba.block1.task2_oop.Main - Invalid phone number format
 18:42:52.679 [main] INFO  com.solvd.laba.block1.task2_oop.Main - PROGRAM ENDED
 
+18:30:28.377 [MyRunnable] INFO  com.solvd.laba.block1.task5_threads.MyRunnable - MyRunnable: 0
+18:30:28.377 [MyThread] INFO  com.solvd.laba.block1.task5_threads.MyThread - MyThread: 0
+18:30:28.381 [MyRunnable] INFO  com.solvd.laba.block1.task5_threads.MyRunnable - MyRunnable: 1
+18:30:28.381 [MyThread] INFO  com.solvd.laba.block1.task5_threads.MyThread - MyThread: 1
+18:30:28.381 [MyThread] INFO  com.solvd.laba.block1.task5_threads.MyThread - MyThread: 2
+18:30:28.381 [MyRunnable] INFO  com.solvd.laba.block1.task5_threads.MyRunnable - MyRunnable: 2
+18:30:28.381 [MyThread] INFO  com.solvd.laba.block1.task5_threads.MyThread - MyThread: 3
+18:30:28.381 [MyRunnable] INFO  com.solvd.laba.block1.task5_threads.MyRunnable - MyRunnable: 3
+18:30:28.381 [MyThread] INFO  com.solvd.laba.block1.task5_threads.MyThread - MyThread: 4
+18:30:28.381 [MyRunnable] INFO  com.solvd.laba.block1.task5_threads.MyRunnable - MyRunnable: 4
+18:31:09.779 [pool-2-thread-1] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-1 t1 got connection: Connection 0
+18:31:09.779 [pool-2-thread-2] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-2 T1 got connection: Connection 1
+18:31:10.786 [pool-2-thread-1] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-1 t1 release connection: Connection 0
+18:31:10.787 [pool-2-thread-1] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-1 t2 got connection: Connection 2
+18:31:11.788 [pool-2-thread-1] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-1 t2 release connection: Connection 2
+18:31:11.788 [pool-2-thread-1] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-1 t3 got connection: Connection 3
+18:31:12.786 [pool-2-thread-2] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-2 T1 release connection: Connection 1
+18:31:12.786 [pool-2-thread-2] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-2 T2 got connection: Connection 4
+18:31:12.789 [pool-2-thread-1] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-1 t3 release connection: Connection 3
+18:31:12.789 [pool-2-thread-1] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-1 t4 got connection: Connection 0
+18:31:13.793 [pool-2-thread-1] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-1 t4 release connection: Connection 0
+18:31:13.794 [pool-2-thread-1] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-1 t5 got connection: Connection 2
+18:31:14.794 [pool-2-thread-1] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-1 t5 release connection: Connection 2
+18:31:15.791 [pool-2-thread-2] INFO  com.solvd.laba.block1.task5_threads.MainTask2 - pool-2-thread-2 T2 release connection: Connection 4

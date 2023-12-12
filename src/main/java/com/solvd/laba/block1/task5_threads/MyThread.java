@@ -3,8 +3,12 @@ package com.solvd.laba.block1.task5_threads;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class MyRunnable implements Runnable {
-    private static final Logger LOGGER = LogManager.getLogger(MyRunnable.class);
+public class MyThread extends Thread {
+    private static final Logger LOGGER = LogManager.getLogger(MyThread.class);
+
+    public MyThread(String name){
+        super(name);
+    }
 
     @Override
     public void run() {
